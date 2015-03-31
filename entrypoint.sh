@@ -28,4 +28,5 @@ if [ -d $HOME/.profile.d ]; then
 		source $HOME/.profile.d/$profile
 	done
 fi
+pip install pyyaml
 /rel_parser.py /opt/release.yml
