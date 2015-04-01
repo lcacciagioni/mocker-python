@@ -20,3 +20,5 @@ This image has a few env vars that you can modify to alter the behavior at runti
 $ git clone https://github.com/IBM-Bluemix/python-hello-world-flask.git $HOME/workspace/python-hello-world-flask
 $ docker run -p 8080:8080 -e RUN_COMMAND="python hello.py" -v $HOME/workspace/python-hello-world-flask:/object cacciald/mocker-python:latest
 ```
+
+> For a more advanced deployment I can recommend you to use [fig/docker compose](https://docs.docker.com/compose/).-
