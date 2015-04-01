@@ -22,11 +22,11 @@ else
 	exit 1
 fi
 cd $HOME
-/buildpack/bin/compile $HOME $TMPDIR && /buildpack/bin/release $HOME > /opt/release.yml
+/buildpack/bin/compile $HOME $TMPDIR
 if [ -d $HOME/.profile.d ]; then
 	for profile in $(ls $HOME/.profile.d); do
 		source $HOME/.profile.d/$profile
 	done
 fi
-pip install pyyaml
-/rel_parser.py /opt/release.yml
+rm -rf /app && ln -s $HOME /app
+$RUN_COMMAND
